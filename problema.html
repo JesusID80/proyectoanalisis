@@ -1,0 +1,82 @@
+    <div>
+        <div >PROBLEMA DE LA SUMA DE SUBCONJUNTOS </div>
+
+        <!--Problema-->
+        <div>  
+            <p>PROBLEMA</p></br>
+            <p>
+            
+                Encontrar un subconjunto de elementos que se seleccionan de un conjunto dado cuya  suma se suma a un  determinado K.
+            Considerando que el conjunto  contiene valores no negativos
+            
+                ¿En que ramos se puede utilizar este problema?
+
+                -Teoría de la complejidad
+                -Criptografía
+            </br>
+                Ejemplo:
+            <p>
+                Entradas:</br>
+                    n = {9, 3, 5, 8, 4, 1}</br>
+                    k = 11
+                </br>
+                Salida:</br>
+                    El subconjunto { 3 , 8  } suma 14    
+            </p></br>              
+            </p>
+       </div> 
+
+        <div>
+                <p>¿Cuáles pueden ser las soluciones?</p>
+            <!--fuerza bruta-->
+            <div>
+                <p> Fuerza Bruta</br></p>
+                <p>
+                    Al resolver el algoritmo por fuerza bruta se va a verificar que acorde a 'n' saber cual subconjunto nos da la suma total desada en 'K'. </br>
+
+
+                    Cuando se implementa fuerza bruta se tienen los problemas superpuestos, teniendo el peor de los casos las complejidades son las siguientes:</br>
+                
+                    
+                    Complejidad Temporal: O(2^n)</br>
+                    Complejidad Espacial: O(1)</br>
+                    </br>
+                </div>
+            <!--Top-Down-->
+            <div>
+                <p> SOLUCIÓN TOP-DOWN</br></p>
+                <p>        
+                    
+                    Este problema tiene una subestructura optima, lo cual nos indica que el problema se va a dividir en "subproblemas" más peuqeños que el problema original y así continuamente hasta que sea lo suficientemente facil resolver.</br>
+            
+                    Los problemas con la subestructura óptima y los subproblemas superpuestos
+                    se pueden resolver por programación dinámica.</br>
+
+                    El Top Down su complejidad es:</br> (n+1) x (S +1)
+                    
+                    Complejidad Temporal: O(n × sum)</br>
+                    Complejidad Espacial: O(n × sum)</br>
+                                            
+                    </br>
+                </div>
+            <!--Bottom-Up-->
+            <div>
+                <p> SOLUCIÓN BOTTOM-UP</br></p>
+                <p>
+                    Primero  se resuelven los problemas más pequeños, ya teniendo la solucion se resuleven los problemas grandes haciendo uso de los más pequeños.</br>
+
+                    En bottom- up se utlizan matrices de tamaño (m+1) x (n+1), donde m es el numero de 
+                    elementos y n la suma deseada.</br>
+                    En programación dinámica  [i][j] será TRUE si existe un subconjunto de elementos de 
+                    A[0…i] que sume un total 'j'.
+
+                    Esta solución tiene la misma complejidad que el enfoque Top-Down pero no se utiliza la recursión.</br></br>
+
+                    Complejidad Temporal: O(n × sum)</br>
+                    Complejidad Espacial: O(n × sum)</br>
+
+                    </br>
+            
+                </div>       
+            </div> 
+        </div>
